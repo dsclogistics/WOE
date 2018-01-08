@@ -1,0 +1,80 @@
+﻿body
+{
+    font-family: Consolas font-size: small;
+    padding: 0px;
+    margin: 0px;
+    font-size: small;
+    font-weight: normal;
+    font-style: normal;
+}
+
+table
+{
+    font-family: Consolas font-size: small;
+    font-size: small;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+}
+
+table td
+{
+  height:20px;
+  line-height:20px;
+  white-space: nowrap;    
+}
+
+table.dynamicTable
+{
+    border: 1px solid #000000;
+    font-family: Consolas font-size: small;
+    font-size: small;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+}
+
+.requiredField
+{
+    background-color: #FF99CC;
+}
+.disabledField
+{
+    background-color: #C0C0C0;
+}
+
+.watermarked
+{
+    font-size: small;
+    font-weight: lighter;
+    font-style: italic;
+    color: #808080;
+}
+
+.dynamicErrorTable
+{
+    border: thin solid #000000;
+    width: 911px; 
+    height: 100px;
+}
+
+.dynamicErrorTable td
+{
+    vertical-align: top;
+}
+
+.dynamicErrorTable div
+{
+    overflow: auto;
+}
+
+.errorColor
+{
+    color: #FF0000;
+}
+
+.successColor
+{
+    color: #008000;
+}
+

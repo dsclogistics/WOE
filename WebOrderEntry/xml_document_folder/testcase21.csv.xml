@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<warehouse_shipping_orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.quorumresources.com">
+  <warehouse_shipping_order>
+    <account_id>NOLOCID</account_id>
+    <account_number>100</account_number>
+    <status>N</status>
+    <customer_reference_number>228566601</customer_reference_number>
+    <consignee_po>77989</consignee_po>
+    <export>Y</export>
+    <temperature_controlled>N</temperature_controlled>
+    <hazmat>N</hazmat>
+    <payment_method>PC</payment_method>
+    <transport_method>U</transport_method>
+    <scac>APAC</scac>
+    <total_weight>
+      <weight>16833</weight>
+      <weight_unit_of_measure>LB</weight_unit_of_measure>
+    </total_weight>
+    <total_volume>
+      <volume>2053.97</volume>
+      <volume_unit_of_measure>CF</volume_unit_of_measure>
+    </total_volume>
+    <shipment_date>20091218</shipment_date>
+    <delivery_date>20091226</delivery_date>
+    <address>
+      <type>SHIPFROM</type>
+      <name>Owens &amp; Minor, Inc. #48</name>
+      <address1>4488 112th St.</address1>
+      <address2>suite 200</address2>
+      <city>holtsville</city>
+      <state_province>ny</state_province>
+      <postal_code>00501</postal_code>
+    </address>
+    <address>
+      <type>SHIPTO</type>
+      <name>Walmart</name>
+      <address1>3101 Poplar Level Road</address1>
+      <address2 xsi:nil="true" />
+      <city>aguada</city>
+      <state_province>pr</state_province>
+      <postal_code>00602</postal_code>
+    </address>
+    <ucc128>N</ucc128>
+    <order_detail>
+      <detail>
+        <line_number>1</line_number>
+        <product_number_or_nmfc>A</product_number_or_nmfc>
+        <reference>
+          <qualifier>bp</qualifier>
+          <number>123456</number>
+          <description>desc</description>
+        </reference>
+        <detail_cube>1.2</detail_cube>
+        <detail_weight>12</detail_weight>
+      </detail>
+    </order_detail>
+  </warehouse_shipping_order>
+</warehouse_shipping_orders>

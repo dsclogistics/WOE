@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<warehouse_shipping_orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.quorumresources.com">
+  <warehouse_shipping_order>
+    <account_id>KC</account_id>
+    <account_number>111111</account_number>
+    <status>N</status>
+    <customer_reference_number>1</customer_reference_number>
+    <consignee_po>1</consignee_po>
+    <export>N</export>
+    <temperature_controlled>N</temperature_controlled>
+    <hazmat>N</hazmat>
+    <payment_method>PP</payment_method>
+    <transport_method>M</transport_method>
+    <scac>AMTR</scac>
+    <total_weight>
+      <weight>1</weight>
+      <weight_unit_of_measure>LB</weight_unit_of_measure>
+    </total_weight>
+    <shipment_date>20090209</shipment_date>
+    <delivery_date>20090210</delivery_date>
+    <address>
+      <type>SHIPFROM</type>
+      <name>MG</name>
+      <address1>411 S 4TH ST </address1>
+      <address2>STE 175</address2>
+      <city>LOUISVILLE</city>
+      <state_province>KY</state_province>
+      <postal_code>40202</postal_code>
+    </address>
+    <address>
+      <type>SHIPTO</type>
+      <name>1</name>
+      <address1>1</address1>
+      <address2 xsi:nil="true" />
+      <city>LOUISVILLE</city>
+      <state_province>KY</state_province>
+      <postal_code>40202</postal_code>
+    </address>
+    <ucc128>N</ucc128>
+    <order_detail>
+      <detail>
+        <line_number>1</line_number>
+        <product_number_or_nmfc>ITMMG</product_number_or_nmfc>
+        <quantity>1</quantity>
+      </detail>
+    </order_detail>
+  </warehouse_shipping_order>
+</warehouse_shipping_orders>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<warehouse_shipping_orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.quorumresources.com">
+  <warehouse_shipping_order>
+    <account_id>PLANETINC</account_id>
+    <account_number>3008</account_number>
+    <status>N</status>
+    <customer_reference_number>17397</customer_reference_number>
+    <consignee_po>46145</consignee_po>
+    <export>N</export>
+    <temperature_controlled>N</temperature_controlled>
+    <hazmat>N</hazmat>
+    <payment_method>PP</payment_method>
+    <transport_method>M</transport_method>
+    <scac>9999</scac>
+    <total_weight>
+      <weight>4471</weight>
+      <weight_unit_of_measure>LB</weight_unit_of_measure>
+    </total_weight>
+    <total_volume>
+      <volume>686</volume>
+      <volume_unit_of_measure>CF</volume_unit_of_measure>
+    </total_volume>
+    <header_reference>
+      <qualifier>CG</qualifier>
+      <description>0245-2916081-0556</description>
+    </header_reference>
+    <header_reference>
+      <qualifier>BM</qualifier>
+      <description>TESTBOLNBR</description>
+    </header_reference>
+    <note>
+      <qualifier>INT</qualifier>
+      <description>Schedule app't 72 hrs in advance using RetalixTraffic.com</description>
+    </note>
+    <shipment_date>20120910</shipment_date>
+    <delivery_date>20120915</delivery_date>
+    <address>
+      <type>SHIPFROM</type>
+      <name>PP          </name>
+      <address1>575 E. OAKTON AVE.                 </address1>
+      <address2>                                   </address2>
+      <city>DES PLAINES                   </city>
+      <state_province>IL</state_province>
+      <postal_code>60018-1949</postal_code>
+    </address>
+    <address>
+      <type>SHIPTO</type>
+      <name>Spartan Stores Grocery Warehouse</name>
+      <address1>Use South Gate</address1>
+      <address2>858 76th Street, SW</address2>
+      <city>Byron Center</city>
+      <state_province>MI</state_province>
+      <postal_code>49315</postal_code>
+    </address>
+    <asn>
+      <id>TARGET</id>
+      <lu>0556</lu>
+      <mr>MR</mr>
+      <dp>DEP-01</dp>
+    </asn>
+    <ucc128>Y</ucc128>
+    <order_detail>
+      <detail>
+        <line_number>1</line_number>
+        <product_number_or_nmfc>11002</product_number_or_nmfc>
+        <detail_cube>25.16</detail_cube>
+        <detail_weight>828</detail_weight>
+      </detail>
+      <detail>
+        <line_number>2</line_number>
+        <product_number_or_nmfc>12022</product_number_or_nmfc>
+        <detail_cube>11.7</detail_cube>
+        <detail_weight>320</detail_weight>
+      </detail>
+      <detail>
+        <line_number>3</line_number>
+        <product_number_or_nmfc>35102</product_number_or_nmfc>
+        <detail_cube>599.2</detail_cube>
+        <detail_weight>3008</detail_weight>
+      </detail>
+    </order_detail>
+  </warehouse_shipping_order>
+</warehouse_shipping_orders>

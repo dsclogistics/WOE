@@ -1,0 +1,143 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebOrderEntry.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <link rel="SHORTCUT ICON" href="dsc.ico"/>
+    <title></title>
+    <link href="~/StyleSheets/global.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <script type="text/javascript">
+        function fireAsyncTriggerEvent(object, hdnControlToFire) {
+            var objectHiddenInputForPostback;
+            objectHiddenInputForPostback = document.getElementById(hdnControlToFire);
+            //will fire event
+            objectHiddenInputForPostback.value = "1";
+        }
+        function setDetailDeleteIndex(sIndexToDelete, hdnInputFieldName) {
+            var r = confirm("Are you sure you want to delete this item?");
+            var objectHiddenInputForPostback;
+            objectHiddenInputForPostback = document.getElementById(hdnInputFieldName);
+            if (r == true) {
+                objectHiddenInputForPostback.value = sIndexToDelete;
+            } else {
+                //subtract one every time to make sure that the onchangevalue event
+                //gets fired
+                objectHiddenInputForPostback.value = objectHiddenInputForPostback.value - 1;
+            }
+        }
+
+//        function toggleEnable(objddl, nameOfObjectToEnable) {
+//          var objectToEnable = new Array();
+//          objectToEnable = document.getElementById(nameOfObjectToEnable);
+//          if (objddl.options[objddl.selectedIndex].text.length > 0) {
+//            objectToEnable.disabled = false;
+//            objectToEnable.style.backgroundColor = '#FF99CC'; 
+//          } else {
+//            objectToEnable.value = "";
+//            objectToEnable.disabled = true;
+//            objectToEnable.style.backgroundColor = '#C0C0C0';  
+//          }
+//      }
+        function toggleEnableGroupOfTextboxes(objddl, delimitedListOfObjectsToEnable) {
+        arrayObjectNames = delimitedListOfObjectsToEnable.split(",");
+
+        if (objddl.options[objddl.selectedIndex].text == "Yes") {
+            for (x = 0; x < arrayObjectNames.length; x++) {
+                objectToEnable = document.getElementById(arrayObjectNames[x]);
+                objectToEnable.disabled = false;
+                objectToEnable.style.backgroundColor = '#FF99CC';
+            }
+        } else {
+            for (x = 0; x < arrayObjectNames.length; x++) {
+                objectToEnable = document.getElementById(arrayObjectNames[x]);
+                objectToEnable.value = "";
+                objectToEnable.style.backgroundColor = '#C0C0C0';
+                objectToEnable.disabled = true;
+            }
+        }
+    }
+    
+//    function toggleEnableDetailRef(objddl, tbDetailRefNumberId, tbDetailRefDescId,
+//        rfvRefNumberId) {
+
+//        if(objddl.options[objddl.selectedIndex].text.length != 0){
+//            objDetailRefNumber = document.getElementById(tbDetailRefNumberId);
+//            objDetailRefNumber.disabled = false;
+//            objDetailRefNumber.style.backgroundColor = '#FF99CC';
+//            objDetailRefDesc = document.getElementById(tbDetailRefDescId);
+//            objDetailRefDesc.disabled = false;
+//            objDetailRefDesc.style.backgroundColor = '#FF99CC';
+//            objDetailRefNumberValidator = document.getElementById(rfvRefNumberId);
+//            objDetailRefNumberValidator.enabled = 'True';
+//        }else{
+//            objDetailRefNumber = document.getElementById(tbDetailRefNumberId);
+//            objDetailRefNumber.value = "";
+//            objDetailRefNumber.disabled = true;
+//            objDetailRefNumber.style.backgroundColor = '#C0C0C0';
+//            objDetailRefDesc = document.getElementById(tbDetailRefDescId);
+//            objDetailRefDesc.value = "";
+//            objDetailRefDesc.disabled = true;
+//            objDetailRefDesc.style.backgroundColor = '#C0C0C0';
+//            objDetailRefNumberValidator = document.getElementById(rfvRefNumberId);
+//            objDetailRefNumberValidator.enabled = 'False';
+//        }
+//    } 
+    </script>
+    
+    <script language="Javascript" type="text/javascript">
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-44741238-5', 'mydsconline.com');
+        ga('send', 'pageview');
+   </script>    
+</head>
+
+<body id="body1" runat="server">
+    <form id="form1" runat="server">
+        <table style="width: 1014px;">
+            <tr>
+                <td style="text-align: left; vertical-align: top">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal"
+                        BackColor="#E3EAEB" DynamicHorizontalOffset="2" Font-Names="Verdana"
+                        Font-Size="0.8em" ForeColor="#666666" StaticSubMenuIndent="10px"
+                        OnMenuItemClick="Menu1_MenuItemClick">
+                        <StaticSelectedStyle BackColor="#1C5E55" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="#E3EAEB" />
+                        <DynamicSelectedStyle BackColor="#1C5E55" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticHoverStyle BackColor="#666666" ForeColor="White" />
+                        <Items>
+                            <asp:MenuItem Text="Enter Order" Value="Enter Order" NavigateUrl="EnterOrder.aspx" ></asp:MenuItem>
+                            <asp:MenuItem Text="Logoff" Value="Logoff" NavigateUrl="javascript:window.close();"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+                <td style="text-align: right; padding-right: 75px;">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="images/dscImage.jpg" />
+                </td>
+            </tr>
+            <tr>
+                <td align="left" colspan="2" style="width: 1014px;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p>
+                        If you have any questions, call our Customer Service Center at (800) 417-6799
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

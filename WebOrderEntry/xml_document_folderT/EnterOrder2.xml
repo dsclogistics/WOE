@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<warehouse_shipping_orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.quorumresources.com">
+  <warehouse_shipping_order>
+    <account_id>LANELIMITD</account_id>
+    <account_number>800007</account_number>
+    <status>N</status>
+    <customer_reference_number>Ref1</customer_reference_number>
+    <consignee_po>PO#12-3</consignee_po>
+    <export>N</export>
+    <temperature_controlled>N</temperature_controlled>
+    <hazmat>N</hazmat>
+    <payment_method>PP</payment_method>
+    <transport_method>M</transport_method>
+    <scac>WWLT</scac>
+    <total_weight>
+      <weight>1500</weight>
+      <weight_unit_of_measure>LB</weight_unit_of_measure>
+    </total_weight>
+    <shipment_date>20120507</shipment_date>
+    <delivery_date>20120517</delivery_date>
+    <address>
+      <type>SHIPFROM</type>
+      <name>CASANDES001 </name>
+      <address1>258 EAST COMMERCIAL ROAD           </address1>
+      <address2>                                   </address2>
+      <city>SAN BERNARDINO                </city>
+      <state_province>CA</state_province>
+      <postal_code>92408-4149</postal_code>
+    </address>
+    <address>
+      <type>SHIPTO</type>
+      <name>TestConsignee</name>
+      <address1>address1</address1>
+      <address2 xsi:nil="true" />
+      <city>Des Plaines</city>
+      <state_province>IL</state_province>
+      <postal_code>60018-1234</postal_code>
+    </address>
+    <ucc128>N</ucc128>
+    <order_detail>
+      <detail>
+        <line_number>1</line_number>
+        <product_number_or_nmfc>04777000</product_number_or_nmfc>
+        <quantity>3</quantity>
+        <detail_weight>500</detail_weight>
+      </detail>
+    </order_detail>
+  </warehouse_shipping_order>
+</warehouse_shipping_orders>
